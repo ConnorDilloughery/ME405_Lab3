@@ -24,11 +24,11 @@ import MotorControl
 
 
 def task1_Motor():
-    """!
-    Task which controls the position of the first motor. There are no input parameters as the values chosen were selected withing
-    the function itself
+        '''!
+        Task which controls the position of the first motor. There are no input parameters as the values chosen were selected withing
+        the function itself
     
-    """
+        '''
         #Initiating the communication interface through UART
         ser= pyb.UART(2,baudrate= 115200)
         #Specifying the motor shield EN pin
@@ -234,10 +234,10 @@ if __name__ == "__main__":
     
     #task1 is responsible for the first motor of the two that are being controlled
     task1 = cotask.Task(task1_Motor, name="Task_1", priority=1, period=10,
-                        profile=True, trace=False, shares=(share0, q0))
+                        profile=True, trace=False)
     #task2 is responsible for the second motor of the two that are being controlled
     task2 = cotask.Task(task2_Motor, name="Task_2", priority=1, period=10,
-                       profile=True, trace=False, shares=(share0, q0))
+                       profile=True, trace=False)
     
     
     cotask.task_list.append(task1)

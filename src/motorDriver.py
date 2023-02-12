@@ -45,8 +45,7 @@ class MotorDriver:
         cause torque in one direction, negative values
         in the opposite direction.
         @param self placeholder for the motor object
-        @param level A signed integer holding the duty
-               cycle of the voltage sent to the motor 
+        @param level A signed integer holding the duty cycle of the voltage sent to the motor 
         """
         ## checks to see if the inputted PWM is positive, zero, or negative
         if level < 0 and level >=-100:
